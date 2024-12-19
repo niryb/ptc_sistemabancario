@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff5f7;
+      color: #333;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #d87093;
+      font-size: 1.8rem;
+    }
+
+    label {
+      color: #d87093;
+      font-weight: bold;
+    }
+
+    input {
+      border: 1px solid #d87093;
+      padding: 5px;
+      border-radius: 3px;
+    }
+
+    button {
+      background-color: #d87093;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #c06080;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th {
+      background-color: #fbe4ea;
+      color: #d87093;
+      padding: 8px;
+    }
+
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Clientes</h1>
+
+<div id="mensagemView"></div>
+
+<form class="form">
+
+  <div class="form-group">
+    <label for="data">Nome</label>
+    <input type="text" id="nome" class="form-control" required autofocus/>
+  </div>
+
+  <div class="form-group">
+    <label for="cpf">CPF</label>
+    <input id="cpf" type="text" class="form-control" required/>
+  </div>
+
+  <div class="form-group">
+    <label for="conta">Conta</label>
+    <input type="text" id="conta" class="form-control" required/>
+  </div>
+
+  <button class="btn btn-primary" type="submit" onclick="clienteController.inserir(event)">Inserir</button>
+</form>
+
+<br>
+<br>
+
+<table>
+  <thead>
+  <tr>
+    <th>DATA DE CRIAÇÃO</th>
+    <th>NOME</th>
+    <th>CPF</th>
+    <th>CONTA</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+
+  <tfoot>
+  </tfoot>
+</table>
+
+<script src="js/model/conta.js"></script>
+<script src="js/model/conta-bonificada.js"></script>
+<script src="js/model/poupanca.js"></script>
+<script src="js/model/contas.js"></script>
+<script src="js/model/cliente.js"></script>
+<script src="js/model/clientes.js"></script>
+<script src="js/controller/conta-controller.js"></script>
+<script src="js/controller/cliente-controller.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
